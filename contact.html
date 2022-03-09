@@ -1,54 +1,70 @@
 <DOCTYPE html>
 <html>
 	<head>
-		<meta>
+		<!--Home Page For Paradigm Pet Professionals
+		Author: Joshua Call
+		Date: March 7, 2022-->
+		<!--[if lt IE 8]>
+			<p>Update your browser to view this page</p>
+		<![endif]-->
+		<meta charset="utf-8"/>
+		<meta name="keywords" content = "new pet consultaion, new pet care consultation"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
 		<title>Paradigm Pets Contact</title>
+		<link href = "styles.css" rel = "stylesheet">
+		<script src="javascript.js"></script>
 	</head>
-	<body>
+	<body onload="activateItem()">
 		<header>
-			<img src = "namelogo.png" alt = "Company Logo Name">
-			<img src = "doglogo.png" alt = "Company Logo Dog">
+			<img class = "namelogo" src = "namelogo.png" alt = "Company Logo Name">
+			<img class = "doglogo" src = "doglogo.png" alt = "Company Logo Dog">
 		</header>
 		<main>
-			<hr>
-			<nav class = "link">
-				<ul>
+		
+			<nav>
+				<ul id = 'nav' class = "navbar">
 					<li><a href = "index.html">HOME</a></li>
 					<li><a href = "dogs.html">DOGS</a></li>
 					<li><a href = "cats.html">CATS</a></li>
 					<li><a href = "fish.html">FISH</a></li>
 					<li><a href = "contact.html">CONTACT</a></li>
+					<li><input id = "searchfield" type = "text" placeholder = "...Find On Page..." class = "search" onkeydown="search(this)"/></li>
 				</ul>
+				<select id = selectmenu onchange="changeWindows(this.value)">
+
+					<option value = "index.html">HOME</option>
+					<option value = "dogs.html">DOGS</option>
+					<option value = "cats.html">CATS</option>
+					<option value = "fish.html">FISH</option>
+					<option value = "contact.html">CONTACT</option>
+				</select>
+				<input id = "mobilesearchfield" type = "text" placeholder = "...Find On Page..." class = "search" onkeydown="search(this)"/>
 			</nav>
-			<nav class = "search">
-				<p>SEARCH</p>
-				<input type = "text" placeholder="Enter Word or Phrase">
-			</nav>
-			<hr>
 			<section>
-				<p>Services: virtual consultations and presentations, one-on-one consultations concerning individual pets, group presentations regarding general pet care (can be tailored to the needs of the group)</p><br>
+				<p class = "intro">Services: virtual consultations and presentations, one-on-one consultations concerning individual pets, group presentations regarding general pet care (can be tailored to the needs of the group)</p>
 			</section>
-			<section>
+			<section class = "form">
 				<form>
 					<label>NAME</label>
-					<input type = "text" placeholder="Name" name ="name" required>
+					<input type = "text" placeholder="Name" name ="name" required/><br><br>
 					<label>PHONE</label>
-					<input type ="text" placeholder="Phone Number" name="email" required>
+					<input type ="tel" placeholder="Phone Number" name="email" required/><br><br>
 					<label>EMAIL</label>
-					<input type="text" placeholder="Email" name="email" required>
+					<input type="email" placeholder="Email" name="email" required/><br><br>
 					<label>TIME ZONE</label>
-					<input type="text" placeholder="Time Zone" name="timezone" required>
+					<input type="text" placeholder="Time Zone" name="timezone" required/><br><br>
 					<label>PET NAME</label>
-					<input type="text" placeholder="Pet Name" name="petname" required>
+					<input type="text" placeholder="Pet Name" name="petname" required/><br><br>
 					<label>TYPE</label>
-					<input type="text" placeholder="Type of Animal" name="type" required>
+					<input type="text" placeholder="Type of Animal" name="type" required/><br><br>
 					<label>AGE</label>
-					<input type="text" placeholder="Pet Age" name="age" required>
+					<input type="text" placeholder="Pet Age" name="age" required/><br><br>
 					<button>SUBMIT</button>
 				</form>
+
 			</section>
 		</main>
-		<footer><hr>
+		<footer>
 			<p>"Paradigm Pet Professionals Has 12 Years' Experience Working With Pet Owners, Certifications In Pet Health And Nutrition, And Customer Recognition For Outstanding Support"</p>
 		</footer>
 	</body>

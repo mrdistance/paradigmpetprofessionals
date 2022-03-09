@@ -1,64 +1,80 @@
 <DOCTYPE html>
 <html>
 	<head>
-		<meta>
+		<!--Home Page For Paradigm Pet Professionals
+		Author: Joshua Call
+		Date: March 7, 2022-->
+		<!--[if lt IE 8]>
+			<p>Update your browser to view this page</p>
+		<![endif]-->
+		<meta charset="utf-8"/>
+		<meta name="keywords" content = "new pet consultaion, new pet care consultation"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
 		<title>Paradigm Pets Fish</title>
+		<link href = "styles.css" rel = "stylesheet">
+		<script src="javascript.js"></script>
 	</head>
-	<body>
+	<body onload="activateItem()">
 		<header>
-			<img src = "namelogo.png" alt = "Company Logo Name">
-			<img src = "doglogo.png" alt = "Company Logo Dog">
+			<img class = "namelogo" src = "namelogo.png" alt = "Company Logo Name">
+			<img class = "doglogo" src = "doglogo.png" alt = "Company Logo Dog">
 		</header>
 		<main>
-			<hr>
-			<nav class = "link">
-				<ul>
+		
+			<nav>
+				<ul id = 'nav' class = "navbar">
 					<li><a href = "index.html">HOME</a></li>
 					<li><a href = "dogs.html">DOGS</a></li>
 					<li><a href = "cats.html">CATS</a></li>
 					<li><a href = "fish.html">FISH</a></li>
 					<li><a href = "contact.html">CONTACT</a></li>
+					<li><input id = "searchfield" type = "text" placeholder = "...Find On Page..." class = "search" onkeydown="search(this)"/></li>
 				</ul>
+				<select id = selectmenu onchange="changeWindows(this.value)">
+
+					<option value = "index.html">HOME</option>
+					<option value = "dogs.html">DOGS</option>
+					<option value = "cats.html">CATS</option>
+					<option value = "fish.html">FISH</option>
+					<option value = "contact.html">CONTACT</option>
+				</select>
+				<input id = "mobilesearchfield" type = "text" placeholder = "...Find On Page..." class = "search" onkeydown="search(this)"/>
 			</nav>
-			<nav class = "search">
-				<p>SEARCH</p>
-				<input type = "text" placeholder="Enter Word or Phrase">
-			</nav>
-			<hr>
+
 			<section>
-				<p>Fish represent a broad class of aquatic animals that can live in fresh or saltwater, depending on the species. Bringing fish into your home can be an exciting hobby, especially if you intend to breed them, and the presence of a fish tank in your home can induce feelings of peace and tranquility.</p><br>
+				<p class = "intro">Fish represent a broad class of aquatic animals that can live in fresh or saltwater, depending on the species. Bringing fish into your home can be an exciting hobby, especially if you intend to breed them, and the presence of a fish tank in your home can induce feelings of peace and tranquility.  Whether you are bringing your fish home for the first time or maintaining your aquarium, it is important to test your water once per week to ensure it is free from toxins that can harm your fish.</p>
 
-				<p>Whether you are bringing your fish home for the first time or maintaining your aquarium, it is important to test your water once per week to ensure it is free from toxins that can harm your fish.</p><br>
-
-				<h3>Freshwater Fish</h3>
-				<p><img src = "fish2.png" alt = "Goldfish In Bowl">There are several freshwater fish to choose from when setting up your aquarium, but it is best to consult with a “Pexpert” to ensure your fish will get along! No matter the species, ensure your fish are suited for a freshwater environment by investing in a water testing kit. Follow these general water chemistry guidelines to ensure your fish will adapt well to your aquarium and avoid ingesting toxins that can harm or kill your fish:</p><br>
-					<ul>
+				<section>
+				<h1>Freshwater Fish</h1>
+				<p class = "info"><img src = "fish2.png" alt = "Goldfish In Bowl">There are several freshwater fish to choose from when setting up your aquarium, but it is best to consult with a “Pexpert” to ensure your fish will get along! No matter the species, ensure your fish are suited for a freshwater environment by investing in a water testing kit. Follow these general water chemistry guidelines to ensure your fish will adapt well to your aquarium and avoid ingesting toxins that can harm or kill your fish:</p>
+					<ul class = "listedinfo">
 						<li>pH Level: 6.8–7.6 (7.0 is considered neutral)</li>
 						<li>Ammonia: any level above zero is harmful to fish</li>
 						<li>Nitrites: less than 0.5 ppm</li>
 					</ul>
-				<br>
+				</section>
 
-				<h3>Saltwater Fish</h3>
-				<p><img src = "fish1.png" alt = "Bulgy Eye Fish">Saltwater fish also offer several options when it comes to choosing among species for your aquarium. As with freshwater fish, consult with a “Pexpert” to ensure your fish will get along are suited for a saltwater environment. Following these general guidelines to avoid dangerous water conditions and ensure the appropriate salinity level for your fishies:</p><br>
-					<ul>
+				<section>
+				<h1>Saltwater Fish</h1>
+				<p class = "info"><img src = "fish1.png" alt = "Bulgy Eye Fish">Saltwater fish also offer several options when it comes to choosing among species for your aquarium. As with freshwater fish, consult with a “Pexpert” to ensure your fish will get along are suited for a saltwater environment. Following these general guidelines to avoid dangerous water conditions and ensure the appropriate salinity level for your fishies:</p>
+					<ul class = "listedinfo">
 						<li>Salinity: 1.020–1.028 sg</li>
 						<li>pH Level: 7.6–8.4 (7.0 is considered neutral)</li>
 						<li>Ammonia: any level above 0.1 ppm requires attention</li>
 						<li>Nitrates: 10 to 40 ppm</li>
 						<li>Nitrites: less than 0.2 ppm</li>
 					</ul>
-				<br>
+				</section>
 
 				<p>For more information on making your tap water safe for your fish, please visit:</p>
-					<ul>
-						<li><a href = "http://www.theaquariumwiki.org/wiki/How_to_make_tap_water_safe_for_fish" target = "blank">The Aquarium Wiki</a></li>
-						<li><a href = "http://fishbase.org/home.htm" target="blank">FishBase</a></li>
-					</ul>
-				</p>
+				<ul class = "links">
+					<li><a href = "http://www.theaquariumwiki.org/wiki/How_to_make_tap_water_safe_for_fish" target = "blank">The Aquarium Wiki</a></li>
+					<li><a href = "http://fishbase.org/home.htm" target="blank">FishBase</a></li>
+				</ul>
+			
 			</section>
 		</main>
-		<footer><hr>
+		<footer>
 			<p>"Evidence-Based Pet Care Advice For Every Pet Lover"</p>
 		</footer>
 	</body>
